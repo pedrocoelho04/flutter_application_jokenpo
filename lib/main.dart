@@ -41,16 +41,16 @@ class _MainAppState extends State<MainApp> {
     });
   }
 
-  IconData getIcone(String opcao) {
+  FaIconData getIcone(String opcao) {
     switch (opcao) {
       case "Pedra":
-        return FontAwesomeIcons.handFist as IconData;
+        return FontAwesomeIcons.handFist;
       case "Papel":
-        return FontAwesomeIcons.hand as IconData;
+        return FontAwesomeIcons.hand;
       case "Tesoura":
-        return FontAwesomeIcons.handScissors as IconData;
+        return FontAwesomeIcons.handScissors;
       default:
-        return FontAwesomeIcons.question as IconData;
+        return FontAwesomeIcons.question;
     }
   }
 
@@ -84,21 +84,21 @@ class _MainAppState extends State<MainApp> {
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: ElevatedButton(
                         onPressed: () => jogar("Pedra"),
-                        child: Icon(getIcone("Pedra")),
+                        child: FaIcon(getIcone("Pedra")),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: ElevatedButton(
                         onPressed: () => jogar("Papel"),
-                        child: Icon(getIcone("Papel")),
+                        child: FaIcon(getIcone("Papel")),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8),
                       child: ElevatedButton(
                         onPressed: () => jogar("Tesoura"),
-                        child: Icon(getIcone("Tesoura")),
+                        child: FaIcon(getIcone("Tesoura")),
                       ),
                     ),
                   ],
@@ -117,7 +117,7 @@ class _MainAppState extends State<MainApp> {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 8),
-                          Icon(getIcone(opPlayer!), size: 40),
+                          FaIcon(getIcone(opPlayer!), size: 40),
                           SizedBox(height: 4),
                           Text(opPlayer!),
                         ],
@@ -139,7 +139,7 @@ class _MainAppState extends State<MainApp> {
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 8),
-                          Icon(getIcone(opSistema!), size: 40),
+                          FaIcon(getIcone(opSistema!), size: 40),
                           SizedBox(height: 4),
                           Text(opSistema!),
                         ],
